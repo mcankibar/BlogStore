@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/user/repo/main/path/to/your/blog_logo.png" alt="BlogStore Logo" width="300" />
-  <br>
+  
+ 
   <br>
   <h1>✍️ BlogStore Akıllı Blog ve Yorum Sistemi 🧠</h1>
   <p>Yapık Zeka Destekli İçerik Yönetimi ve Güvenli Etkileşim</p>
