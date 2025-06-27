@@ -24,7 +24,7 @@ namespace BlogStore.BusinessLayer.Concrete
             string uniqueSlug = baseSlug;
             int counter = 1;
 
-            // Veritabanında bu slug'ın zaten var olup olmadığını kontrol   et
+            
             while (await _context.Articles.AnyAsync(a => a.Slug == uniqueSlug && a.ArticleId != excludeArticleId))
             {
                 uniqueSlug = $"{baseSlug}-{counter}";
