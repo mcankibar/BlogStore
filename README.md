@@ -113,8 +113,8 @@ Projede, makaleler, yorumlar, kullanıcılar ve kategoriler gibi ana varlıklar 
 
 ### 🛡️ Yönetim Paneli
 
-| İstatistikler | Admin Panel | Yönetim | 
-|:------------------------:|:---------------:|:------------:|
-| ![Admin Dashboard](blogimages/6.png) | ![Profil (Admin)](blogimages/1.png) | ![Şifre Değiştirme (Admin)](blogimages/2.png) |  
+| İstatistikler | Son Yorumlar |Admin Panel | Yönetim | 
+|:------------------------:|:---------------:|:---------------:|:------------:|
+| ![Admin Dashboard](blogimages/6.png) | ![Profil (Admin)](blogimages/1.png) | ![Son Yorumlar (Admin)](blogimages/7.png) | ![Şifre Değiştirme (Admin)](blogimages/2.png) |  
 
 ---
