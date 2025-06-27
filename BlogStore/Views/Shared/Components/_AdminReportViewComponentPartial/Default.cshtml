@@ -1,0 +1,32 @@
+﻿<div class="card">
+    <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+            <h4 class="card-title mb-0">Makale Raporlarım</h4>
+        </div>
+        <ul class="list-group list-group-flush fs-5">
+            <li class="list-group-item d-flex align-items-center">
+                <i class="ti ti-crown text-warning me-3"></i>
+                <span class="me-auto">En Çok Yorum Alan Makalem</span>
+                <span class="fw-bold">@ViewBag.mostCommentedArticleTitle</span>
+                <span class="badge bg-primary ms-2">@ViewBag.mostCommentedArticleCount yorum</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <i class="ti ti-clock text-info me-3"></i>
+                <span class="me-auto">En Yeni Makalem</span>
+                <span class="fw-bold">@ViewBag.newestArticleTitle</span>
+                <span class="badge bg-info ms-2">@ViewBag.newestArticleDate</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <i class="ti ti-ruler text-success me-3"></i>
+                <span class="me-auto">Ortalama Makale Uzunluğum</span>
+                <span class="fw-bold">@ViewBag.avgArticleLength</span>
+                <span class="ms-2">karakter</span>
+            </li>
+            <li class="list-group-item d-flex align-items-center">
+                <i class="ti ti-mood-smile text-success me-3"></i>
+                <span class="me-auto">Pozitif Yorum Oranı</span>
+                <span class="fw-bold">%@ViewBag.positiveCommentRate</span>
+            </li>
+        </ul>
+    </div>
+</div>

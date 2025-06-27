@@ -1,0 +1,32 @@
+﻿@model BlogStore.EntityLayer.Entities.Article
+
+<style>
+    .post-content-body {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        padding: 32px 24px;
+        margin-bottom: 32px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 1.1rem;
+        color: #222;
+        line-height: 1.7;
+        letter-spacing: 0.01em;
+        transition: box-shadow 0.2s;
+    }
+    .post-content-body:hover {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    }
+    .post-content-body p {
+        margin-bottom: 0;
+        word-break: break-word;
+    }
+</style>
+
+<div class="post-content-body">
+    <p>
+        @((Model.Description?.Length > 1000) 
+            ? Model.Description.Substring(0, 1000) + "..." 
+            : (Model.Description ?? string.Empty))
+    </p>
+</div>

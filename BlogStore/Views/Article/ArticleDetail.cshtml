@@ -1,0 +1,81 @@
+﻿@model int
+<!doctype html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadLayoutComponentPartial")
+<body>
+
+    @await Component.InvokeAsync("_NavbarLayoutComponentPartial")
+    @await Component.InvokeAsync("_ArticleDetailMainCoverImageComponentPartial", new { id = Model })
+
+
+
+    <section class="section">
+        <div class="container">
+
+            <div class="row blog-entries element-animate">
+
+                <div class="col-md-12 col-lg-8 main-content">
+
+                    @await Component.InvokeAsync("_ArticleDetailContentComponentPartial", new { id = Model })
+
+
+                    <div class="pt-5">
+                        <p>Categories:  <a href="#">Food</a>, <a href="#">Travel</a>  Tags: <a href="#">#manila</a>, <a href="#">#asia</a></p>
+                    </div>
+
+
+                    @await Component.InvokeAsync("_ArticleDetailCommentListComponentPartial", new { id = Model })
+
+                </div>
+
+                <!-- END main-content -->
+
+                <div class="col-md-12 col-lg-4 sidebar">
+                   
+                    <!-- END sidebar-box -->
+                    @await Component.InvokeAsync("_ArticleDetailAboutAuthorComponentPartial", new { id = Model })
+                    <!-- END sidebar-box -->
+                    @await Component.InvokeAsync("_ArticleDetailPopularPostsComponentPartial")
+                    <!-- END sidebar-box -->
+                    @await Component.InvokeAsync("_ArticleDetailCategoryListComponentPartial")
+
+
+                    <!-- END sidebar-box -->
+
+                    <div class="sidebar-box">
+                        <h3 class="heading">Tags</h3>
+                        <ul class="tags">
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Adventure</a></li>
+                            <li><a href="#">Food</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Freelancing</a></li>
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Adventure</a></li>
+                            <li><a href="#">Food</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Freelancing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END sidebar -->
+
+            </div>
+        </div>
+    </section>
+
+
+
+    @await Component.InvokeAsync("_ArticleDetailFooterComponentPartial")
+
+
+
+
+    @await Component.InvokeAsync("_ScriptsLayoutComponentPartial")
+
+
+</body>
+</html>

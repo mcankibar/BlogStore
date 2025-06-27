@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <link rel="shortcut icon" type="image/png" href="/flexy-bootstrap-lite-1.0.0/assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="/flexy-bootstrap-lite-1.0.0/assets/css/styles.min.css" />
+  <!-- FontAwesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-papmQ1QwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQwQw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .left-sidebar {
+      background: linear-gradient(135deg, #f8f9fa 80%, #e9e6ff 100%);
+      min-height: 100vh;
+      padding-top: 0 !important;
+      border-right: 1px solid #e0e0e0;
+      box-shadow: 2px 0 12px 0 rgba(108, 99, 255, 0.04);
+    }
+
+    .brand-logo {
+      padding-left: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #ececec;
+      margin-bottom: 0.5rem;
+    }
+
+    .admin-panel-title {
+      color: #6c63ff;
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-left: 0;
+      text-shadow: 0 2px 8px #e9e6ff;
+    }
+
+    .sidebar-nav ul {
+      padding-left: 0;
+      margin-top: 0.5rem;
+    }
+
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 22px;
+      border-radius: 10px;
+      color: #333;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      box-shadow: 0 1px 4px rgba(108, 99, 255, 0.03);
+    }
+
+    .sidebar-link:hover,
+    .sidebar-link.active {
+      background: #6c63ff22;
+      color: #6c63ff;
+      text-decoration: none;
+      box-shadow: 0 2px 8px #e9e6ff;
+    }
+
+    .sidebar-link i {
+      font-size: 1.3rem;
+      color: #6c63ff;
+      min-width: 22px;
+      text-align: center;
+    }
+
+    .hide-menu {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Topbar -->
+    <div class="app-topstrip bg-dark py-4 px-3 w-100 d-lg-flex align-items-center justify-content-between">
+      <!-- Topbar boş bırakıldı -->
+    </div>
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <span class="admin-panel-title">Admin Panel</span>
+        </div>
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/Admin/Index" aria-expanded="false">
+                <i class="ti ti-chart-bar"></i>
+                <span class="hide-menu">İstatistikler</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/Admin/CreateArticle" aria-expanded="false">
+                <i class="ti ti-pencil"></i>
+                <span class="hide-menu">Makale Oluştur</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/Admin/ArticleList" aria-expanded="false">
+                <i class="ti ti-list"></i>
+                <span class="hide-menu">Makale Listem</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/Admin/Profile" aria-expanded="false">
+                <i class="ti ti-user"></i>
+                <span class="hide-menu">Profil Bilgilerim</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <!-- Main Content Start -->
+    <div class="body-wrapper">
+
+      <div class="body-wrapper-inner">
+        <main class="container-fluid" style="padding-top:65px">
+          @RenderBody()
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+﻿@model BlogStore.EntityLayer.Entities.Category
+
+@{
+    Layout = null;
+}
+<link href="@(Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css"))" rel="stylesheet" />
+
+<div class="container">
+    <br/>
+    <form asp-action="UpdateCategory" asp-controller="Category" method="post">
+        <input type="hidden" asp-for="CategoryId" />        
+        <label>Kategori Adı</label>
+
+        <input name="CategoryName" type="text" class="form-control"/>
+        <br/>
+        <button class="btn btn-success">Kaydet</button>
+    </form>
+
+</div>

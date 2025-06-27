@@ -1,0 +1,75 @@
+﻿<style>
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #222;
+    background: #f3f6fa;
+    border-radius: 12px;
+    padding: 8px 24px;
+    min-width: 60px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    letter-spacing: 1px;
+}
+</style>
+
+<div class="card overflow-hidden">
+    <div class="card-body pb-0">
+        <div class="d-flex align-items-start">
+            <div>
+                <h4 class="card-title">Makale İstatistiklerim</h4>
+                
+            </div>
+            <div class="ms-auto">
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="text-muted" id="year1-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ti ti-dots fs-7"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="year1-dropdown">
+                        <li><a class="dropdown-item" href="javascript:void(0)">Action</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Another action</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 pb-3 d-flex align-items-center">
+            <span class="btn btn-primary rounded-circle round-48 hstack justify-content-center">
+                <i class="ti ti-notes fs-6"></i>
+            </span>
+            <div class="ms-3">
+                <h5 class="mb-0 fw-bolder fs-4">Toplam Makale Sayım</h5>
+                
+            </div>
+            <div class="ms-auto">
+                <span class="stat-number">@ViewBag.articleCount</span>
+            </div>
+        </div>
+        <div class="py-3 d-flex align-items-center">
+            <span class="btn btn-warning rounded-circle round-48 hstack justify-content-center">
+                <i class="ti ti-star fs-6"></i>
+            </span>
+            <div class="ms-3">
+                <h5 class="mb-0 fw-bolder fs-4">Kaç Farklı Alanda Makalem Var</h5>
+                
+            </div>
+            <div class="ms-auto">
+                <span class="stat-number">@ViewBag.categoryCount</span>
+            </div>
+        </div>
+        <div class="py-3 d-flex align-items-center">
+            <span class="btn btn-success rounded-circle round-48 hstack justify-content-center">
+                <i class="ti ti-message-dots fs-6"></i>
+            </span>
+            <div class="ms-3">
+                <h5 class="mb-0 fw-bolder fs-4">Toplam Yorum Sayım</h5>
+                
+            </div>
+            <div class="ms-auto">
+                <span class="stat-number">@ViewBag.userTotalCommentCount</span>
+            </div>
+        </div>
+      
+    </div>
+</div>

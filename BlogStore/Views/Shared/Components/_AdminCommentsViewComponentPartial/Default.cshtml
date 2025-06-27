@@ -1,0 +1,95 @@
+﻿<style>
+    .admin-comment-card {
+        border-radius: 18px;
+        box-shadow: 0 2px 12px 0 rgba(60,60,60,0.08);
+        border: 1px solid #e3e6ef;
+        overflow: hidden;
+    }
+
+    .admin-comment-row {
+        border-radius: 12px;
+        transition: background 0.2s;
+        box-shadow: 0 1px 6px 0 rgba(60,60,60,0.04);
+        border: 1px solid #f0f0f0;
+        margin-bottom: 12px;
+        background: #fff;
+    }
+
+        .admin-comment-row:last-child {
+            margin-bottom: 32px; /* Son elemana ekstra boşluk */
+        }
+
+        .admin-comment-row:hover {
+            background: #f8fafc;
+        }
+
+    .admin-comment-avatar {
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0 2px 8px 0 rgba(60,60,60,0.10);
+        transition: transform 0.2s;
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+    }
+
+        .admin-comment-avatar:hover {
+            transform: scale(1.08);
+        }
+
+    .admin-comment-textarea {
+        border-radius: 8px;
+        border: 1px solid #e3e6ef;
+        background: #f9fafb;
+        resize: none;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .comment-widgets {
+        padding-bottom: 0;
+        box-sizing: border-box;
+        height: 465px;
+        overflow-y: auto;
+    }
+</style>
+
+<div class="card admin-comment-card">
+    <div class="card-body">
+        <h4 class="card-title mb-0">Son Yorumlar</h4>
+    </div>
+    <div class="comment-widgets scrollable mb-2 common-widget" data-simplebar="">
+        @foreach (var item in (IEnumerable<dynamic>)ViewBag.lastComments)
+        {
+            var score = item.Score is float ? (float)item.Score : Convert.ToSingle(item.Score);
+            var scorePercent = (int)(score * 100);
+            string scoreClass = score < 0.5
+            ? "bg-success-subtle text-success"
+            : score < 0.75
+            ? "bg-warning-subtle text-warning"
+            : "bg-danger-subtle text-danger";
+            <div class="d-flex flex-row comment-row admin-comment-row p-3 gap-3">
+                <div>
+                    <span>
+                        <img src="@(item.UserImageUrl ?? "/flexy-bootstrap-lite-1.0.0/assets/images/profile/user-1.jpg")"
+                             class="admin-comment-avatar"
+                             alt="user" />
+                    </span>
+                </div>
+                <div class="comment-text w-100">
+                    <h6 class="fw-medium">@item.UserName</h6>
+                    <textarea class="form-control mb-2 admin-comment-textarea" rows="2" readonly>@item.Detail</textarea>
+                    <div class="comment-footer mt-2">
+                        <div class="d-flex align-items-center">
+                            <span class="badge bg-info-subtle text-info me-2">@item.ArticleTitle</span>
+                            <span class="badge @scoreClass me-2">Skor: %@scorePercent</span>
+                        </div>
+                        <span class="text-muted ms-auto fw-normal fs-2 d-block mt-2 text-end">
+                            @item.Date
+                        </span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

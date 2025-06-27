@@ -1,0 +1,30 @@
+﻿@model BlogStore.Models.UserRegisterViewModel
+
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<form asp-action="CreateUser" asp-controller="Register" method="post">
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <br/>
+        <label>Adınız</label>
+        <input type="text" name="Name" asp-for="Name" class="form-control"/>
+        <br/>
+        <label>Soyadınız</label>
+        <input type="text" name="SurName"  asp-for="Surname" class="form-control" />
+        <br/>
+        <label>Email Adresiniz</label>
+        <input type="text" name="Email" asp-for="Email" class="form-control" />
+        <br/>
+        <label>Kullanıcı Adı </label>
+        <input type="text" name="Username" asp-for="Username" class="form-control" />
+        <br/>
+        <label>Şifreniz</label>
+        <input type="password" name="Password" asp-for="Password" class="form-control"/>
+        <br/>
+        <button class="btn btn-primary">Kullanıcı Oluştur</button>
+
+    </div>
+</form>

@@ -1,0 +1,73 @@
+﻿@model BlogStore.EntityLayer.Entities.AppUser
+
+<style>
+    .sidebar-box {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        padding: 32px 24px;
+        margin-bottom: 32px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        transition: box-shadow 0.2s;
+    }
+    .sidebar-box:hover {
+        box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    }
+    .bio.text-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bio img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #f1f1f1;
+        margin-bottom: 16px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .bio-body h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #222;
+    }
+    .bio-body p.mb-4 {
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+    .bio-body .btn {
+        font-size: 0.95rem;
+        padding: 6px 18px;
+        border-radius: 6px;
+    }
+    .bio-body .social a {
+        color: #555;
+        margin: 0 6px;
+        font-size: 1.2rem;
+        transition: color 0.2s;
+    }
+    .bio-body .social a:hover {
+        color: #007bff;
+    }
+   
+</style>
+
+<div class="sidebar-box">
+    <div class="bio text-center">
+        <img src="@Model.ImageUrl" alt="Image Placeholder" class="img-fluid mb-3">
+        <div class="bio-body">
+            <h2>@Model.Name @Model.Surname</h2>
+            <p class="mb-4">@Model.Description</p>
+            <p><a href="#" class="btn btn-primary btn-sm rounded px-2 py-2">Yazar Profili</a></p>
+            <p class="social">
+                <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
+                <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
+                <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
+                <a href="#" class="p-2"><span class="fa fa-youtube-play"></span></a>
+            </p>
+        </div>
+    </div>
+</div>

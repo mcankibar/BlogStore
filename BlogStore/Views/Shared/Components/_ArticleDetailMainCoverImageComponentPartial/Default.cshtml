@@ -1,0 +1,115 @@
+﻿@model BlogStore.EntityLayer.Entities.Article
+
+<style>
+    .site-cover-sm {
+        background: url('@Model.ImageUrl') center center/cover no-repeat;
+        min-height: 350px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+        .site-cover-sm::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 1;
+        }
+
+        .site-cover-sm .post-entry {
+            position: relative;
+            z-index: 2;
+            background: rgba(255,255,255,0.93);
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(44,62,80,0.10);
+            padding: 32px 20px 24px 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-top: 4px solid #2980b9;
+        }
+
+        .site-cover-sm h1 {
+            color: #1a237e;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            letter-spacing: 1px;
+            background: none;
+            border: none;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        .site-cover-sm .post-meta {
+            color: #444;
+            font-size: 1.08rem;
+            font-weight: 500;
+            margin-top: 12px;
+            background: none;
+            border-radius: 0;
+            padding: 0;
+            display: inline-block;
+            box-shadow: none;
+        }
+
+    .author-figure {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 18px;
+        vertical-align: middle;
+    }
+
+        .author-figure img {
+            width: 150px;
+            height: 50px;
+            
+            border-radius: 5%;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.13);
+            background: #eee;
+            transition: transform 0.2s;
+        }
+
+            .author-figure img:hover {
+                transform: scale(1.06);
+                border-color: #2980b9;
+            }
+
+    .site-cover-sm .d-inline-block.mt-1 {
+        color: #2980b9;
+        font-weight: 600;
+        margin-right: 8px;
+        font-size: 1.08rem;
+        text-shadow: none;
+    }
+
+    .site-cover-sm .post-meta span:last-child {
+        color: #888;
+        font-weight: 500;
+        margin-left: 8px;
+        text-shadow: none;
+    }
+</style>
+
+<div class="site-cover site-cover-sm same-height overlay single-page">
+    <div class="container">
+        <div class="row same-height justify-content-center">
+            <div class="col-md-8">
+                <div class="post-entry text-center">
+                    <h1 class="mb-4" style="color:black">@Model.Title</h1>
+                    <div class="post-meta align-items-center text-center">
+                        <figure class="author-figure" >
+                            <img src="@ViewBag.AuthorImage" alt="Yazar Fotoğrafı" class="img-fluid">
+                        </figure>
+                        <span class="d-inline-block mt-1">@ViewBag.AuthorName</span>
+                        <span>&nbsp;-&nbsp; @Model.CreatedDate.ToString("dd MMMM yyyy")</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

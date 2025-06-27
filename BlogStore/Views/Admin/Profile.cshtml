@@ -1,0 +1,139 @@
+﻿@model BlogStore.Controllers.ChangePasswordViewModel
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .profile-card {
+        max-width: 400px;
+        margin: 40px auto;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px 0 rgba(60,60,60,0.10);
+        border: 1px solid #e3e6ef;
+        background: #fff;
+        padding: 2.5rem 2rem 2rem 2rem;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #fff;
+        box-shadow: 0 2px 8px 0 rgba(60,60,60,0.10);
+        margin-bottom: 1rem;
+        background: #f3f3f3;
+    }
+
+    .profile-name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 0.25rem;
+    }
+
+    .profile-username {
+        font-size: 1.05rem;
+        color: #555;
+        background: #f5f7fa;
+        border: 1px solid #e3e6ef;
+        border-radius: 7px;
+        padding: 0.4rem 0.75rem;
+        margin-bottom: 0.7rem;
+        display: inline-block;
+        word-break: break-all;
+    }
+
+    .profile-form-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #444;
+        margin: 2rem 0 1rem 0;
+    }
+
+    .profile-form-group {
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+        .profile-form-group label {
+            font-size: 0.98rem;
+            color: #555;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .profile-form-group input {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border-radius: 7px;
+            border: 1px solid #e3e6ef;
+            font-size: 1rem;
+            background: #f9fafb;
+        }
+
+            .profile-form-group input:focus {
+                outline: none;
+                border-color: #a3bffa;
+                background: #fff;
+            }
+
+    .profile-form-btn {
+        width: 100%;
+        padding: 0.6rem 0;
+        border-radius: 7px;
+        border: none;
+        background: #4f8cff;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.05rem;
+        transition: background 0.2s;
+        margin-top: 0.5rem;
+    }
+
+        .profile-form-btn:hover {
+            background: #2563eb;
+        }
+</style>
+
+<div class="profile-card">
+    <img src="@((ViewBag.imageUrl as string) ?? "/flexy-bootstrap-lite-1.0.0/assets/images/profile/user-1.jpg")"
+         class="profile-avatar"
+         alt="Profil Resmi" />
+    <div class="profile-name">@ViewBag.name @ViewBag.surname</div>
+    <div class="profile-username">@ViewBag.username</div>
+
+    <div class="profile-form-title">Şifre Değiştir</div>
+    <form method="post" action="/Admin/ChangePassword">
+        <div class="profile-form-group">
+            <label for="CurrentPassword">Mevcut Şifre</label>
+            <input type="password" id="CurrentPassword" name="CurrentPassword" required autocomplete="current-password" />
+        </div>
+        <div class="profile-form-group">
+            <label for="NewPassword">Yeni Şifre</label>
+            <input type="password" id="NewPassword" name="NewPassword" required autocomplete="new-password" />
+        </div>
+        <div class="profile-form-group">
+            <label for="ConfirmPassword">Yeni Şifre (Tekrar)</label>
+            <input type="password" id="ConfirmPassword" name="ConfirmPassword" required autocomplete="new-password" />
+        </div>
+        <button type="submit" class="profile-form-btn">Şifreyi Güncelle</button>
+    </form>
+</div>
+
+@if (TempData["PasswordMessage"] != null)
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            Swal.fire({
+                icon: '@(TempData["PasswordMessageType"] ?? "info")',
+                title: '@TempData["PasswordMessage"]',
+                confirmButtonText: 'Tamam'
+            });
+        });
+    </script>
+}
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
