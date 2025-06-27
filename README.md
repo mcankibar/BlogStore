@@ -66,9 +66,7 @@ Proje, temiz kod prensipleri ve sürdürülebilirlik gözetilerek **Katmanlı Mi
 - `BlogStore.EntityLayer` **(Entity Layer):**
     - Veritabanı tablolarına karşılık gelen saf varlık (entity) sınıflarını (örn. `Article`, `Comment`, `AppUser`, `Category`) içerir.
     - Veri modellerinin tanımlandığı katmandır.
-- `BlogStore.DtoLayer` **(DTO Layer):**
-    - Katmanlar arası veri transferi sırasında kullanılan DTO (Data Transfer Object) sınıflarını barındırır.
-    - Veri maruziyetini kontrol eder ve katmanlar arasındaki bağımlılığı azaltır.
+
 
 ### 🔹 Veri Yapısı ve İlişkiler
 
