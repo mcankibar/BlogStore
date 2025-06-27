@@ -102,20 +102,20 @@ Projede, makaleler, yorumlar, kullanıcılar ve kategoriler gibi ana varlıklar 
 
 ### 🏡 Anasayfa & Keşfet
 
-| Anasayfa | Kategoriye Göre Makaleler |
+| Anasayfa |  Makalele |
 |:----------:|:----------:|
-| ![Anasayfa Görünümü](path/to/your/homepage.png) | ![Kategori Listeleme](path/to/your/category_listing.png) |
+| ![Anasayfa Görünümü](blogimages/5.png) | ![Kategori Listeleme](blogimages/8.png) |
 
-### 📝 Makale Detay ve Yorum Sistemi
+### 📝 Yorum Sistemi
 
 | Makale Detay | Yorum Ekleme Alanı |
 |:------------:|:-----------:|
-| ![Makale Detay Sayfası](path/to/your/article_detail.png) | ![Yorum Formu](path/to/your/comment_form.png) |
+| ![Toksik Yorum](blogimages/3.png) | ![Başarılı Yorum](blogimages/4.png |
 
 ### 🛡️ Yönetim Paneli
 
 | Dashboard İstatistikleri | Makale Yönetimi | Yorum Yönetimi | Toksik Yorum Raporu |
 |:------------------------:|:---------------:|:------------:|:--------------------:|
-| ![Admin Dashboard](path/to/your/admin_dashboard.png) | ![Makale Listesi (Admin)](path/to/your/admin_articles_list.png) | ![Yorum Listesi (Admin)](path/to/your/admin_comments_list.png) | ![Toksik Yorum Raporu](path/to/your/admin_toxic_report.png) |
+| ![Admin Dashboard](blogimages/6.png) | ![Profil (Admin)](blogimages/1.png) | ![Şifre Değiştirme (Admin)](blogimages/2.png) |  |
 
 ---
