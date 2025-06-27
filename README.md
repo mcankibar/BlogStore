@@ -108,14 +108,14 @@ Projede, makaleler, yorumlar, kullanıcılar ve kategoriler gibi ana varlıklar 
 
 ### 📝 Yorum Sistemi
 
-| Makale Detay | Yorum Ekleme Alanı |
+| Yorum Kontrol | Yorum Ekleme Alanı |
 |:------------:|:-----------:|
 | ![Toksik Yorum](blogimages/3.png) | ![Başarılı Yorum](blogimages/4.png) |
 
 ### 🛡️ Yönetim Paneli
 
-| Dashboard İstatistikleri | Makale Yönetimi | Yorum Yönetimi | Toksik Yorum Raporu |
-|:------------------------:|:---------------:|:------------:|:--------------------:|
+| Dashboard İstatistikleri | Makale Yönetimi | Yorum Yönetimi | 
+|:------------------------:|:---------------:|:------------:|
 | ![Admin Dashboard](blogimages/6.png) | ![Profil (Admin)](blogimages/1.png) | ![Şifre Değiştirme (Admin)](blogimages/2.png) |  
 
 ---
