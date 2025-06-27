@@ -94,7 +94,7 @@ Projede, makaleler, yorumlar, kullanıcılar ve kategoriler gibi ana varlıklar 
     - `HttpClient` sınıfı (Dış API çağrıları için) 📡
     - `Newtonsoft.Json` (JSON verilerini işlemek için) 📦
 - **Veritabanı:**
-    - [**Kullandığınız Veritabanı Adı, örn: SQL Server, PostgreSQL, MongoDB**] 💾
+    - [**SQL Server**] 💾
 
 ---
 
