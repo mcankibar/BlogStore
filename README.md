@@ -98,7 +98,6 @@ Projede, makaleler, yorumlar, kullanıcılar ve kategoriler gibi ana varlıklar 
 
 ## 📸 Uygulama Görselleri
 
-{{-- Lütfen aşağıdaki boşlukları kendi ekran görüntüleri bağlantılarınızla doldurun. Toplamda 6-7 görsel ekleyebilirsiniz. --}}
 
 ### 🏡 Anasayfa & Keşfet
 
