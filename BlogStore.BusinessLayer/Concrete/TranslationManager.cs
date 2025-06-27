@@ -37,7 +37,7 @@ namespace BlogStore.BusinessLayer.Concrete
                 return null;
 
             var responseString = await response.Content.ReadAsStringAsync();
-            // Yanıt genellikle: [{"translation_text": "translated text"}]
+            
             var result = JsonConvert.DeserializeObject<List<TranslationResponse>>(responseString);
             return result?.FirstOrDefault()?.translation_text;
         }
