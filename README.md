@@ -115,6 +115,6 @@ Projede, makaleler, yorumlar, kullanıcılar ve kategoriler gibi ana varlıklar 
 
 | İstatistikler | Son Yorumlar |Admin Panel | Yönetim | 
 |:------------------------:|:---------------:|:---------------:|:------------:|
-| ![Admin Dashboard](blogimages/6.png) | ![Profil (Admin)](blogimages/1.png) | ![Son Yorumlar (Admin)](blogimages/7.png) | ![Şifre Değiştirme (Admin)](blogimages/2.png) |  
+| ![Admin Dashboard](blogimages/6.png) | ![Profil (Admin)](blogimages/7.png) | ![Son Yorumlar (Admin)](blogimages/1.png) | ![Şifre Değiştirme (Admin)](blogimages/2.png) |  
 
 ---
