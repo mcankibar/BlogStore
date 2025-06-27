@@ -102,7 +102,7 @@ Projede, makaleler, yorumlar, kullanıcılar ve kategoriler gibi ana varlıklar 
 
 ### 🏡 Anasayfa & Keşfet
 
-| Anasayfa |  Makalele |
+| Anasayfa |  Makale |
 |:----------:|:----------:|
 | ![Anasayfa Görünümü](blogimages/5.png) | ![Kategori Listeleme](blogimages/8.png) |
 
@@ -114,7 +114,7 @@ Projede, makaleler, yorumlar, kullanıcılar ve kategoriler gibi ana varlıklar 
 
 ### 🛡️ Yönetim Paneli
 
-| Dashboard İstatistikleri | Makale Yönetimi | Yorum Yönetimi | 
+| Dashboard İstatistikleri | Admin Panel | Yönetim | 
 |:------------------------:|:---------------:|:------------:|
 | ![Admin Dashboard](blogimages/6.png) | ![Profil (Admin)](blogimages/1.png) | ![Şifre Değiştirme (Admin)](blogimages/2.png) |  
 
