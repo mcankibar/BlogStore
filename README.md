@@ -3,7 +3,7 @@
  
   <br>
   <h1>✍️ BlogStore Akıllı Blog ve Yorum Sistemi 🧠</h1>
-  <p>Yapık Zeka Destekli İçerik Yönetimi ve Güvenli Etkileşim</p>
+  <p>Yapay Zeka Destekli İçerik Yönetimi ve Güvenli Etkileşim</p>
 </p>
 
 ---
